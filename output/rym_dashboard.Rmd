@@ -19,7 +19,7 @@ library(viridis)
 library(wordcloud2)
 library(lubridate)
 
-chart2 = subset(read.csv("/Users/bryanokani/Documents/Data Science Projects/RYM/data/rym_chart2.csv"), select = -c(1))
+chart2 = subset(read.csv("/data/rym_chart2.csv"), select = -c(1))
 
 #Condense primary_genres to just the first genre in each string (before the first comma)
 chart2$primary_genres <- ifelse(substr(chart2$primary_genres, 1, regexpr(",",chart2$primary_genres)-1) == "", #test
